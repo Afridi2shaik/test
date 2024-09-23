@@ -1,0 +1,9 @@
+repos:
+  - repo: local
+    hooks:
+      - id: block-codeowners-file
+        name: Block CODEOWNERS file in .github folder
+        entry: bash scripts/block_codeowners.sh
+        language: system
+        files: ^.*$
+        stages: [commit]
